@@ -1,5 +1,3 @@
-
-
 class CountdownTimer {
     constructor({ selector, targetDate }) {
         this.selector = selector;
@@ -18,7 +16,6 @@ class CountdownTimer {
     stop() {
         clearInterval(this.intervalId);
     }
-
 
  getTime(time) {
     const days = Math.floor(time / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
@@ -39,10 +36,8 @@ class CountdownTimer {
         document.querySelector('[data-value="hours"]').textContent = hours;
         document.querySelector('[data-value="mins"]').textContent = mins;
         document.querySelector('[data-value="secs"]').textContent = secs;
-    }
-    
+    }    
 }
-
 new CountdownTimer({
   selector: '#timer-1',
   targetDate: new Date('Jul 31, 2021'),
